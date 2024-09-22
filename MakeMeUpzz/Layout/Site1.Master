@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="MakeMeUpzz.Layout.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+       <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div>
+            <nav>
+                <asp:LinkButton ID="HomeNav" runat="server" PostBackUrl="~/Views/HomePage.aspx">Home</asp:LinkButton>
+                <asp:LinkButton ID="OrderMakeupNav" runat="server" PostBackUrl="~/Views/OrderMakeupPage.aspx">Order Makeup</asp:LinkButton>
+                <asp:LinkButton ID="HistoryNav" runat="server" PostBackUrl="~/Views/TransactionHistoryPage.aspx">History</asp:LinkButton>
+                <asp:LinkButton ID="ManageMakeupNav" runat="server" PostBackUrl="~/Views/ManageMakeupPage.aspx">Manage Makeup</asp:LinkButton>
+                <asp:LinkButton ID="OrderQueueNav" runat="server" PostBackUrl="~/Views/TransactionHandlePage.aspx">Order Queue</asp:LinkButton>
+                <asp:LinkButton ID="ProfileNav" runat="server" PostBackUrl="~/Views/UserProfilePage.aspx">Profile</asp:LinkButton>
+                <asp:LinkButton ID="TransactionReportNav" runat="server" PostBackUrl="~/Views/TransactionReportPage.aspx">Transaction Report</asp:LinkButton>
+                <asp:Button ID="LogoutBtn" runat="server" Text="Logout" OnClick="LogoutBtn_Click" />
+            </nav>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
